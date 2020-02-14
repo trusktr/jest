@@ -1,8 +1,8 @@
 
 # jest-browser-globals
 
-Lets you run [Jest] in a browser. Works with [Mocha], which is expected to be in
-the global scope first.
+Lets you run [Jest] in a real browser. Works with [Mocha], which is expected to
+be in the global scope first.
 
 Makes the following available:
 

@@ -1,5 +1,6 @@
 {
   "name": "jest-browser-globals",
+  "description": "Run Jest in a real browser environment",
   "version": "25.1.0-beta",
   "repository": {
     "type": "git",
