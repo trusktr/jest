@@ -64,6 +64,10 @@ function browserBuild(pkgName, entryPath, destination) {
               __dirname,
               '../packages/expect/build/fakeChalk.js'
             ),
+            'pretty-format': path.resolve(
+              __dirname,
+              '../packages/expect/build/fakePrettyFormat.js'
+            )
           },
           extensions: ['.js', '.json', '.ts'],
         },
