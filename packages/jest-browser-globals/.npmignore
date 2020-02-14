@@ -1,0 +1,8 @@
+**/__mocks__/**
+**/__tests__/**
+src
+tsconfig.json
+tsconfig.tsbuildinfo
+
+# we only want to publish the build-es5 dir
+build
