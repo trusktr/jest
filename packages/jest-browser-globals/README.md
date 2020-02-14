@@ -7,8 +7,8 @@ the global scope first.
 Makes the following available:
 
 - [expect](https://jestjs.io/docs/en/expect)
-- [jest.fn] - [mock functions](https://jestjs.io/docs/en/mock-function-api)
-- [test.each] - one of the few [globals](https://jestjs.io/docs/en/api) that
+- `jest.fn` - [mock functions](https://jestjs.io/docs/en/mock-function-api)
+- `test.each` - one of the few [globals](https://jestjs.io/docs/en/api) that
   Mocha doesn't define
 
 

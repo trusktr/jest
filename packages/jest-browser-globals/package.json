@@ -1,6 +1,6 @@
 {
   "name": "jest-browser-globals",
-  "version": "25.1.0",
+  "version": "25.1.0-beta",
   "repository": {
     "type": "git",
     "url": "https://github.com/arshaw/jest.git",
