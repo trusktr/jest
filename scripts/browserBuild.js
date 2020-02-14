@@ -45,8 +45,9 @@ function browserBuild(pkgName, entryPath, destination) {
         entry: entryPath,
         output: {
           path: path.dirname(destination),
-          library: camelCase(pkgName),
-          libraryTarget: 'umd',
+          // jest-browser-globals doesn't need UMD.
+          // attaches directly to browser globals.
+          libraryTarget: 'var',
           filename: path.basename(destination),
         },
         module: {

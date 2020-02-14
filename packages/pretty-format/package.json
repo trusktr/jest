@@ -10,7 +10,6 @@
   "description": "Stringify any JavaScript value.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "browser": "build-es5/index.js",
   "author": "James Kyle <me@thejameskyle.com>",
   "dependencies": {
     "@jest/types": "^25.1.0",
