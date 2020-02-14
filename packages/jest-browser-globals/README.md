@@ -64,7 +64,8 @@ To run it in an HTML file, do something like this:
 This package has been created from a fork of the [Jest Project]. It aggregates
 the `expect`, `jest-mock`, and `jest-each` packages, attaches them to the
 `window`, and does various other things to ensure that Jest runs similarly to
-how it runs in Node. 
+how it runs in Node. It also strips out lots of dependencies that only make
+sense in a Node environment, resulting in a slimmer build.
 
 
 [Jest]: https://jestjs.io/
