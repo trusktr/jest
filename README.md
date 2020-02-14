@@ -11,6 +11,19 @@ To view fork modifications, run:
 git diff v25.1.0 ':!yarn.lock'
 ```
 
+To build:
+
+```
+npm run build
+```
+
+To publish:
+
+```
+cd packages/jest-browser-globals/
+npm publish
+```
+
 Now back to our scheduled programming...
 
 
