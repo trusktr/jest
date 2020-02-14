@@ -56,6 +56,18 @@ function browserBuild(pkgName, entryPath, destination) {
               loader: 'babel-loader',
               options: babelEs5Options,
             },
+            {
+              test: /\.[jt]sx?$/,
+              loader: 'string-replace-loader',
+              options: {
+                // replace references like `chalk.red`.
+                // it's risky to replace source code like this,
+                // so make the regex robust, to handle transformed code.
+                search: 'chalk(\\(\\))?(\\.default)?\\.\\w+',
+                replace: 'chalk._',
+                flags: 'g'
+              }
+            }
           ],
         },
         resolve: {
