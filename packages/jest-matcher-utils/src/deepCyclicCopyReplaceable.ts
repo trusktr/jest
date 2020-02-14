@@ -7,7 +7,7 @@
 
 const builtInObject = [
   Array,
-  Buffer,
+  // Buffer, // not using this avoids an expensive polyfill
   Date,
   Float32Array,
   Float64Array,
