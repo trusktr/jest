@@ -7,7 +7,6 @@
  */
 
 import {Global} from '@jest/types';
-import {ErrorWithStack} from 'jest-util';
 
 import convertArrayTable from './table/array';
 import convertTemplateTable from './table/template';
@@ -43,7 +42,8 @@ export default (cb: GlobalCallback, supportsDone: boolean = true) => (
         ),
       );
     } catch (e) {
-      const error = new ErrorWithStack(e.message, eachBind);
+      // avoid using jest-util to format the stack trace. use native Error.
+      const error = new Error(e.message);
       return cb(title, () => {
         throw error;
       });
