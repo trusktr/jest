@@ -20,7 +20,8 @@ if (!win.describe) {
   );
 } else {
 
-  // create jest aliased globals
+  // create alias
+  if (!win.test) { win.test = win.it; }
   if (!win.fit) { win.fit = win.it.only; }
   if (!win.xit) { win.xit = win.it.skip; }
   if (!win.fdescribe) { win.fdescribe = win.describe.only; }

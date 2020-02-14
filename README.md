@@ -1,3 +1,19 @@
+
+## Fork Info
+
+This fork as been created to build the `jest-browser-globals` packages,
+which lets you run Jest in a browser.
+[More info &raquo;](./packages/jest-browser-globals/README.md)
+
+To view fork modifications, run:
+
+```sh
+git diff v25.1.0 ':!yarn.lock'
+```
+
+Now back to our scheduled programming...
+
+
 <p>
   <a href="http://badge.fury.io/js/jest"><img src="https://badge.fury.io/js/jest.svg" alt="npm version"></a>
   <a href="https://twitter.com/intent/follow?screen_name=fbjest"><img align="right" src="https://img.shields.io/twitter/follow/fbjest.svg?style=social&label=Follow%20@fbjest" alt="Follow on Twitter"></a>

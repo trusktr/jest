@@ -3,7 +3,7 @@
   "version": "25.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/jest.git",
+    "url": "https://github.com/arshaw/jest.git",
     "directory": "packages/jest-browser-globals"
   },
   "license": "MIT",
@@ -14,9 +14,6 @@
     "expect": "^25.1.0",
     "jest-each": "^25.1.0",
     "jest-mock": "^25.1.0"
-  },
-  "engines": {
-    "node": ">= 8.3"
   },
   "publishConfig": {
     "access": "public"
