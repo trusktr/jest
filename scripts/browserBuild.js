@@ -40,8 +40,8 @@ function browserBuild(pkgName, entryPath, destination) {
     webpack(
       /* eslint-disable sort-keys */
       {
-        mode: 'development',
-        devtool: 'source-map',
+        mode: 'production', // 'development',
+        devtool: false, // 'source-map',
         entry: entryPath,
         output: {
           path: path.dirname(destination),
