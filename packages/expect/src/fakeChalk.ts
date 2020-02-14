@@ -5,19 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import ansiStyles = require('ansi-styles');
-
-const returnInput = (str: string) => str;
-
-const allColorsAsFunc = Object.keys(ansiStyles)
-  .map(style => ({[style]: returnInput}))
-  .reduce((acc, cur) => Object.assign(acc, cur));
-
-Object.keys(allColorsAsFunc)
-  .map(color => allColorsAsFunc[color])
-  .forEach(style => {
-    Object.assign(style, allColorsAsFunc);
-    Object.assign(returnInput, style);
-  });
-
-export = allColorsAsFunc;
+// The original implementation imported the ansi-styles package for a list of
+// all possible colors so that it could make dummy functions for each.
+// Instead, make one dummy function and use webpack to rewrite all calls
+// to chalk via string-replace-loader.
+export function _(s: string) {
+  return s
+}

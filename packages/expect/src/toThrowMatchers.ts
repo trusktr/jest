@@ -6,7 +6,6 @@
  *
  */
 
-import {formatStackTrace, separateMessageFromStack} from 'jest-message-util';
 import {
   EXPECTED_COLOR,
   MatcherHintOptions,
@@ -420,15 +419,12 @@ const formatReceived = (
 const formatStack = (thrown: Thrown | null) =>
   thrown === null || !thrown.isError
     ? ''
-    : formatStackTrace(
-        separateMessageFromStack(thrown.value.stack!).stack,
-        {
-          rootDir: process.cwd(),
-          testMatch: [],
-        },
-        {
-          noStackTrace: false,
-        },
-      );
+    : (() => {
+      // log the error directly to the console and return an empty string
+      // for concatenation. better than using jest-message-util,
+      // which imports a lot of heavy dependencies.
+      console.error(thrown)
+      return ''
+    })
 
 export default matchers;
