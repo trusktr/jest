@@ -71,3 +71,11 @@ sense in a Node environment, resulting in a slimmer build.
 [Jest]: https://jestjs.io/
 [Mocha]: https://mochajs.org/
 [Jest Project]: https://github.com/facebook/jest
+
+# Limitations
+
+This is not providing any globals like `beforeAll`, `afterAll`, `beforeEach`, `afterEach`, etc.
+It cannot do that, because those are specific to the Jest test runner, and presumably if
+you are using jest-browser-globals, then you are using another test runner besides Jest. If
+this provided `beforeAll`, it would simply not work with your test runner because it would have
+no idea how to track all your tests.
